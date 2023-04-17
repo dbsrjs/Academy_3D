@@ -8,7 +8,7 @@ public class EBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.Range(2, 6) * 10;    //EBullet의 속도 랜덤(max spped = 50f)
+        speed = Random.Range(2, 6) * 2;
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class EBullet : MonoBehaviour
         transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 
-    void OnTriggerEnter(Collider other)     //gameObject와 충돌시 삭제
+    void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
         Destroy(gameObject);

@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.Range(2, 6) * 10f;   //EBulletÀÇ ¼Óµµ ·£´ý(max spped = 50f)   
+        speed = Random.Range(2, 5) * 10f;
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             if (transform.position.x < -4)
             {
                 isLeft = false;
-                speed = Random.Range(2, 6) * 2f;
+                speed = Random.Range(2, 5) * 2f;
             }
         }
         else
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
             if (transform.position.x > 4)
             {
                 isLeft = true;
-                speed = Random.Range(2, 6) *20f;
+                speed = Random.Range(2, 5) * 2f;
             }
         }
     }
