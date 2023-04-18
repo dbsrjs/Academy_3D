@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeMove : MonoBehaviour
+public class CubeMove_Z : MonoBehaviour
 {
-    private float speed = 0.06f;
+    public GameObject player;
+    private float speed = 0.07f;
 
 
     bool isLeft = true;
@@ -28,5 +29,9 @@ public class CubeMove : MonoBehaviour
                 isLeft = true;
             }
         }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(player);
     }
 }
