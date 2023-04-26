@@ -218,4 +218,9 @@ public class SimpleSampleCharacterControl : MonoBehaviour
             m_animator.SetTrigger("Jump");
         }
     }
+
+    public void Jump()
+    {
+        m_rigidBody.AddForce(Vector3.up * (m_jumpForce * 2), ForceMode.Impulse);
+    }
 }

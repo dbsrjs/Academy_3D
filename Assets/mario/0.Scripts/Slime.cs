@@ -4,38 +4,53 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Direction
     {
-        
+        Left,
+        Right
     }
 
-    // Update is called once per frame
+    Direction dir = Direction.Left;
     void Update()
     {
         LeftRay();
         RightRay();
+
+        if (dir == Direction.Left)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * 3f);
+        }
+        else if (dir == Direction.Right)
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * 3f);
+        }
     }
 
     void LeftRay()
     {
         Vector3 leftPos = transform.position;
-        leftPos.x -= 0.2f;
+        leftPos.x -= 0.5f;
+        leftPos.y -= 0.2f;
         Debug.DrawRay(leftPos, Vector3.down * 0.4f, Color.red);
-
-        Ray ray = new Ray(leftPos, Vector3.down * 0.4f);
-        RaycastHit hit;
-
-        if(Physics.Raycast(ray, out hit))
+                
+        if(!Physics.Raycast(leftPos, Vector3.down, 0.4f))
         {
-            Debug.Log(hit.collider.name);
+            transform.localScale = new Vector3(0.5f, 0.5f, -0.5f);
+            dir = Direction.Right;
         }
     }
 
     void RightRay()
     {
         Vector3 rightPos = transform.position;
-        rightPos.x += 0.2f;
+        rightPos.x += 0.5f;
+        rightPos.y -= 0.2f;
         Debug.DrawRay(rightPos, Vector3.down * 0.4f, Color.red);
+
+        if (!Physics.Raycast(rightPos, Vector3.down, 0.4f))
+        {
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            dir = Direction.Left;
+        }
     }
 }
