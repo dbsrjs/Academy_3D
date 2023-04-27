@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +14,14 @@ public class FollowCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target == null)
+        {
+            target = FindObjectOfType<SimpleSampleCharacterControl>().transform;
+            return;
+        }
         Vector3 pos = target.position;
         pos.z -= 5f;
+        pos.y += 1f;
         transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * 7f);
     }
 }
