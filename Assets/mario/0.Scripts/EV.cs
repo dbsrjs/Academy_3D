@@ -32,42 +32,42 @@ public class EV : MonoBehaviour
 
         while (true)
         {
-            if(fDoor.left.localPosition.z >= 0.75)
+            if(fDoor.left.localPosition.x >= 0.75)
             {
                 Vector3 lpos = fDoor.left.position;
-                lpos.z = 0.75f;
+                lpos.x = 0.75f;
                 fDoor.left.position = lpos;
 
-                Vector3 rpos = fDoor.left.position;
-                rpos.z = -0.75f;
-                fDoor.left.position = rpos;
+                Vector3 rpos = fDoor.right.position;
+                rpos.x = -0.75f;
+                fDoor.right.position = rpos;
 
                 break;
             }
-            fDoor.left.Translate(new Vector3(0, 0, 0.01f));
-            fDoor.right.Translate(new Vector3(0, 0, -0.01f));
+            fDoor.left.Translate(new Vector3(0.01f, 0, 0));
+            fDoor.right.Translate(new Vector3(-0.01f, 0, 0));
 
             yield return new WaitForSeconds(Time.deltaTime * 10f);
         }
 
         yield return new WaitForSeconds(3f);
 
-        while (true)
+        while (true)    //¿­¸²
         {
-            if (fDoor.left.localPosition.z <= 0.25)
+            if (fDoor.left.localPosition.x <= 0.25)
             {
                 Vector3 lpos = fDoor.left.position;
-                lpos.z = 0.25f;
+                lpos.x = 0.25f;
                 fDoor.left.position = lpos;
 
-                Vector3 rpos = fDoor.left.position;
-                rpos.z = -0.25f;
-                fDoor.left.position = rpos;
+                Vector3 rpos = fDoor.right.position;
+                rpos.x = -0.25f;
+                fDoor.right.position = rpos;
 
                 break;
             }
-            fDoor.left.Translate(new Vector3(0, 0, -0.01f));
-            fDoor.right.Translate(new Vector3(0, 0, 0.01f));
+            fDoor.left.Translate(new Vector3(-0.01f, 0, 0));
+            fDoor.right.Translate(new Vector3(0.01f, 0, 0));
 
             yield return new WaitForSeconds(Time.deltaTime * 10f);
         }
