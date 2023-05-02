@@ -103,29 +103,26 @@ public class EV : MonoBehaviour
             if (isUp)   //6층에 도달하면 1층으로 내려오기
             {
                 if (transform.localPosition.y >= floors[currentFloor].localPosition.y)
-                {
-                    /*
+                {                    
                     Vector3 vec = transform.localPosition;
                     vec.y = floors[currentFloor].localPosition.y;
-                    transform.localPosition = vec;
-                    */
+                    transform.localPosition = vec;                    
                     break;
                 }
                 transform.Translate(Vector3.up * Time.deltaTime * 30f);
             }
             else
             {
-
+                //??
             }
             transform.Translate(Vector3.up * Time.deltaTime * 30f);
-
 
             yield return new WaitForSeconds(0.01f);
         }
 
         yield return new WaitForSeconds(0.5f);  //delay Time
         if (isUp)   //6층에 도달하면 1층으로 내려오기
-        {                        
+        {
             isUp = false;
             currentFloor--;
         }            

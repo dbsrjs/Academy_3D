@@ -47,8 +47,6 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
-
-        //DontDestroyOnLoad(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -219,10 +217,5 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_animator.SetTrigger("Jump");
         }
-    }
-
-    public void Jump()
-    {
-        m_rigidBody.AddForce(Vector3.up * (m_jumpForce * 2), ForceMode.Impulse);
     }
 }
