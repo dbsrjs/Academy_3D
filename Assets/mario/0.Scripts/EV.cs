@@ -65,8 +65,8 @@ public class EV : MonoBehaviour
 
                 break;
             }
-            fDoor.left.Translate(new Vector3(0.01f, 0f, 0f));
-            fDoor.right.Translate(new Vector3(-0.01f, 0f, 0f));
+            fDoor.left.Translate(new Vector3(0.05f, 0f, 0f));
+            fDoor.right.Translate(new Vector3(-0.05f, 0f, 0f));
 
             yield return new WaitForSeconds(Time.deltaTime * doorSpeed);    //delay Time
         }

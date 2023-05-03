@@ -35,7 +35,7 @@ public class Elevator : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F1))
         {
             StartCoroutine("MainEV");
-        }
+        }        
     }
 
     IEnumerator MainEV()
@@ -52,7 +52,7 @@ public class Elevator : MonoBehaviour
         //초기값은 0.25 맥스 값은 0.84
         
         yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine("OpenDoor");          
+        yield return StartCoroutine("OpenDoor");
         yield return StartCoroutine("CloseDoor");
     }
 
@@ -119,6 +119,7 @@ public class Elevator : MonoBehaviour
                 }
                 transform.Translate(Vector3.up * Time.deltaTime * speed);
             }
+
             else
             {
                 if (transform.localPosition.y <= floors[currentFloor].localPosition.y)
@@ -142,7 +143,7 @@ public class Elevator : MonoBehaviour
             if (currentFloor > floors.Count - 1)
             {
                 isUp = false;
-                currentFloor--;
+                currentFloor--;               
             }
         }
 
@@ -153,6 +154,7 @@ public class Elevator : MonoBehaviour
             {
                 isUp = true;
                 currentFloor = 0;
+                currentFloor++;
             }
         }
         StartCoroutine("MainEV");
