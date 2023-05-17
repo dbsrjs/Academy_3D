@@ -12,10 +12,6 @@ public class ToggleCont : MonoBehaviour
     void Start()
     {
         SetFontColorChange();
-        for (int i = 0; true; i++)
-        {
-            Debug.Log("d¤·");
-        }
     }
 
     public void OnValueChange(Toggle toggle)

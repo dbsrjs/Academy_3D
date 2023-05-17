@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/mario/Scenes/Mario-1.unity
     guid: d7fdf599d234b9d4a9e4e6597fa80c1e
   - enabled: 1
-    path: Assets/mario/Scenes/EV.unity
+    path: Assets/EV(N)/Scenes/EV.unity
     guid: c301b91de97eb9048a62af407d8bfed5
   m_configObjects: {}
