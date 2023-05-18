@@ -23,17 +23,9 @@ public class EV : MonoBehaviour
     float doorSpeed = 0.1f;
     void Start()
     {
-        //Invoke("Move", 2f);
         Move();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-        { 
-            StartCoroutine("MainEV");
-        }      
-    }
     void Move()
     {
         StartCoroutine(MainEV());

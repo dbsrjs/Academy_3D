@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.16038445, g: 0.18576723, b: 0.20533869, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -846,8 +846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5530faad4bc3594418d253b4256ea9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lDoor: {fileID: 919784035}
-  rDoor: {fileID: 1006563078}
+  left: {fileID: 919784036}
+  right: {fileID: 1006563079}
 --- !u!1 &414659077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,9 +1249,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 377828017}
+      - m_Target: {fileID: 377828015}
         m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
-        m_MethodName: OnClick_1F
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2394,14 +2394,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466519620}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.87089574, y: -0.045656797, z: -0.482349, w: -0.08243473}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -185.713, y: -58.419983, z: -9.197998}
 --- !u!1 &1483276196
 GameObject:
   m_ObjectHideFlags: 0
