@@ -5,38 +5,96 @@ using UnityEngine.UI;
 
 public class EV_Button : MonoBehaviour
 {
-    public Transform left;
-    public Transform right;
-
-    void Start()
+    enum DoorDirection  //enum
     {
-        OpenDoor();
+        Left,
+        Right
     }
 
-    //min : 0.25f, max : 0.7f
-    public void OpenDoor()
-    {
-        if (left.transform.localPosition.z <= 0.25f)
-        {
-            left.Translate(new Vector3(0f, 0f, 0.5f));
-        }
+    [SerializeField] Transform[] doors;
+    [SerializeField] Transform[] floors;
 
-        if (right.transform.localPosition.z <= -0.25f)
+    public void OnClick_Open()
+    {
+        StartCoroutine(Open(doors[0], DoorDirection.Left));     //코루틴 불러오기
+        StartCoroutine(Open(doors[1], DoorDirection.Right));
+    }
+
+    public void OnClick_Close()
+    {
+        StartCoroutine(Close(doors[0], DoorDirection.Left));    //코루틴 불러오기
+        StartCoroutine(Close(doors[1], DoorDirection.Right));
+    }
+
+    public void AutoDoor()
+    {
+        StartCoroutine("CAutoDoor");
+    }
+        
+    IEnumerator CAutoDoor()     //문 여닫기
+    {
+        OnClick_Open();
+        yield return new WaitForSeconds(1f);    //delay Time
+        OnClick_Close();
+    }
+    float doorSpeed = 10;
+    IEnumerator Open(Transform trans, DoorDirection dir)
+    {
+        //min : 0.25    max : 0.7
+
+        while (true)
         {
-            right.Translate(new Vector3(0f, 0f, -0.5f));
+            if (dir == DoorDirection.Left)  
+            {
+                if (trans.localPosition.z <= 0.25f)
+                {
+                    trans.localPosition = new Vector3(-0.5f, 0.5f, 0.7f);   //좌표값으로 이동
+                    yield break;
+                }
+                trans.Translate(Vector3.left * Time.deltaTime * doorSpeed);
+            }
+
+            else   //Doorirection.Right
+            {
+                if (trans.localPosition.z >= -0.25f)
+                {
+                    trans.localPosition = new Vector3(-0.5f, 0.5f, -0.7f);
+                    yield break;
+                }
+                trans.Translate(Vector3.right * Time.deltaTime * doorSpeed);
+            }
+
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
-    public void ExitDoor()
+    IEnumerator Close(Transform trans, DoorDirection dir)
     {
-        if (left.transform.localPosition.z >= 0.7f)
-        {
-            left.Translate(new Vector3(0f, 0f, -0.5f));
-        }
+        //min : 0.25    max : 0.7
 
-        if (right.transform.localPosition.z >= -0.7f)
+        while (true)
         {
-            right.Translate(new Vector3(0f, 0f, 0.7f));
+            if (dir == DoorDirection.Left)
+            {
+                if (trans.localPosition.z >= 0.7f)
+                {
+                    trans.localPosition = new Vector3(-0.5f, 0.5f, 0.25f);    ////좌표값으로 이동
+                    yield break;
+                }
+                trans.Translate(Vector3.left * Time.deltaTime * doorSpeed);
+            }
+
+            else
+            {
+                if (trans.localPosition.z <= 0.7f)
+                {
+                    trans.localPosition = new Vector3(-0.5f, 0.5f, -0.25f);
+                    yield break;
+                }
+                trans.Translate(Vector3.right * Time.deltaTime * doorSpeed);
+            }
+
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }
