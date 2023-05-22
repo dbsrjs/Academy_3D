@@ -560,7 +560,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 263144238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &263144238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301551194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -916,7 +928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414659080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &414659080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,6 +1258,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 377828015}
         m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
         m_MethodName: 
@@ -1502,7 +1538,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649865394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &649865394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,7 +2173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985794331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &985794331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,6 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5530faad4bc3594418d253b4256ea9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elevertor: {fileID: 377828016}
   doors:
   - {fileID: 919784036}
   - {fileID: 1006563079}
@@ -2621,6 +2682,9 @@ MonoBehaviour:
   - {fileID: 909799529}
   - {fileID: 1311231635}
   - {fileID: 304318614}
+  doorBtn:
+  - {fileID: 813882214}
+  - {fileID: 1727118732}
 --- !u!1 &1466519620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656638259}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360854979}
+        m_TargetAssemblyTypeName: EV_Button, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656638259
 MonoBehaviour:
   m_ObjectHideFlags: 0
