@@ -947,6 +947,25 @@ MonoBehaviour:
   p: {fileID: 8748688857734335150}
   audiosos: {fileID: 0}
   boss: {fileID: 1824339355259804}
+  strs:
+  - "\uBB34"
+  - "\uAD81"
+  - "\uD654"
+  - "\uAF43"
+  - "\uC774"
+  - "\uD53C"
+  - "\uC5C8"
+  - "\uC2B5"
+  - "\uB2C8"
+  - "\uB2E4"
+  curStr: 
+  strIndex: 0
+  curTimer: 0
+  strDelayTime: 0
+  waitTimer: 4
+  isStart: 0
+  isStop: 0
+  PStopPos: {x: 0, y: 0, z: 0}
 --- !u!1 &717284774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,6 +4212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557a54c6f11f1854dbb4c3c5e921f5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStart: 0
+  isFinish: 0
 --- !u!114 &8748688857734335151
 MonoBehaviour:
   m_ObjectHideFlags: 0
